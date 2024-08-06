@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GSAP with EJS Example</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+</head>
+<body>
+    <div class="box">Animate me!</div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
+            tl.to(".box", { duration: 1, x: 100 })
+              .to(".box", { duration: 1, y: 100 })
+              .to(".box", { duration: 1, scale: 1.5 })
+              .to(".box", { duration: 1, rotation: 360 })
+              .to(".box", { duration: 1, x: 0, y: 0, scale: 1, rotation: 0 });
+        });
+    </script>
+</body>
+</html>
